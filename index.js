@@ -1,9 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const utils = require('utils');
+const util = require('util');
 
-const generateMarkdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./util/generateMarkdown');
 const { title } = require('process');
 
 // TODO: Create an array of questions for user input
