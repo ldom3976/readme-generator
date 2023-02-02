@@ -1,3 +1,4 @@
+// function that returns a license badge
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
@@ -15,16 +16,19 @@ function renderLicenseBadge(license) {
   }
 }
 
+//function that returns a license link
 function renderLicenseLink(license) {
   return"";
 }
 
+//function that returns license section of README
 function renderLicenseSection(license) {
   var badge = renderLicenseBadge(license);
   var link = renderLicenseLink(license);
   return `${badge} ${link}`;
 }
 
+//function that generates markdown for README
 function generateMarkdown(answer) {
   return `
   ${renderLicenseSection(answer.license)}

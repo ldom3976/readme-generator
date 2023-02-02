@@ -1,4 +1,3 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
@@ -6,7 +5,7 @@ const util = require('util');
 const generateMarkdown = require('./util/generateMarkdown');
 const { title } = require('process');
 
-// TODO: Create an array of questions for user input
+//array of questions for user input
 const questions = [{
     type: "input",
     message: "What is the title of the project?",
@@ -47,7 +46,7 @@ const questions = [{
 }
 ];
 
-// TODO: Create a function to write README file
+//function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function(err) {
         console.log(fileName)
@@ -60,7 +59,7 @@ function writeToFile(fileName, data) {
     })
 }
 
-// TODO: Create a function to initialize app
+//function to initialize app
 function init() {
     inquirer.prompt(questions)
         .then(function(data) {
