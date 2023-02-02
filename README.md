@@ -35,6 +35,12 @@ THEN I am taken to the corresponding section of the README
 
 ## Visual Representations
 ## Images
+![Alt text](assets/images/indeximg.png)
+![Alt text](assets/images/genmarkimg.png)
+![Alt text](assets/images/questionsimg.png)
+
+
 ## Video
 
 ## Link to Github Repo
+https://github.com/ldom3976/readme-generator.git
