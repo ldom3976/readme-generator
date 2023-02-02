@@ -43,6 +43,7 @@ THEN I am taken to the corresponding section of the README
 ## Video
 [label](assets/video/Untitled_%20Feb%202,%202023%201_05%20PM.webm)
 
-## Link to Github Repo and Demo Video
+## Link to Github Repo
 https://github.com/ldom3976/readme-generator.git
+## Link to Demo Video
 https://drive.google.com/file/d/1-sOQUY9OGEK4vV57ZV8mt0dQq2mPU8PT/view
