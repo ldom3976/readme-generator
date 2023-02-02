@@ -1,20 +1,37 @@
 function renderLicenseBadge(license) {
-  if (license !== 'None') {
-    return `* [License](#license)`;
+  switch (license) {
+    case "MIT":
+      return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
+      break;
+    case "GPL":
+      return "![License: GPL](https://img.shields.io/badge/License-GPLv3-blue.svg)";
+      break;
+    case "Apache 2.0":
+      return "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)";
+      break;
+    default:
+      return "No License selected";
+      break;
   }
-  return '';
 }
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.Title}
-  https://github.com/${data.Username}/${data.Title}
+function renderLicenseLink(license) {
+  return"";
+}
 
+function renderLicenseSection(license) {
+  var badge = renderLicenseBadge(license);
+  var link = renderLicenseLink(license);
+  return `${badge} ${link}`;
+}
+
+function generateMarkdown(answer) {
+  return `
+  ${renderLicenseSection(answer.license)}
+  # Title
+  ${answer.Title}
   ## Description
-  ${data.Description}
-
-
-
+  ${answer.Description}
   ## Table of Contents
   * [User Story](#User)
   * [Installation](#Installation)
@@ -23,22 +40,17 @@ function generateMarkdown(data) {
   * [License](#license)
   * 
   ## User Story
-  ${data.User}
+  ${answer.User}
   ## Installation
-  \`\`\`
-  ${data.Installation}
-  \`\`\`
-  ## Tests
-  \`\`\`
-  ${data.Testing}
-  \`\`\`
-  ## Licensing
-  ${renderLicense(data.License)}
-  
+  ${answer.Installation}
+  ## Test
+  ${answer.Testing}
   ## Contributors
-  ${data.Contributors}
+  ${answer.Contributors}
+  ## License
+  ${answer.License}
 
-`;
+  `;
 }
 
 module.exports = generateMarkdown;
